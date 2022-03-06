@@ -24,13 +24,13 @@ db.query('SELECT email FROM users WHERE email=?',[email],async(err,results)=>{
     }
     if(results.length>0){
         return res.render('sign_up',{
-            massage:'the email is already in use'
+            message:'the email is already in use'
 
         })
 
     }else if(password!==confirmPassword){
         return res.render('sign_up',{
-            massage:'passwords do not match'
+            message:'passwords do not match'
         })
     }
     let hashedpassword=await bcrypt.hash(password,8)
