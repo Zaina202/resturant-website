@@ -40,7 +40,7 @@ db.query('SELECT email FROM users WHERE email=?',[email],async(err,results)=>{
     }else{
         console.log(results)
         return res.render('index',{
-            message:'user sign up'
+            message:'Succestully! Your account has been created'
         })
     }
 
