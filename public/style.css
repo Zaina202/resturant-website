@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background:url('https://gcdnb.pbrd.co/images/Vt3N1yHOXLNM.jpg?o=1') ;
+    background-size:cover ;
+}
+.sign_up{
+    width: 360px;
+    height: 620px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: auto;
+    background-color: rgb(245, 225, 188);
+    border-radius: 3px;
+    border: 1px solid rgb(194, 190, 190);
+}
+.login{
+    width: 360px;
+    height:300px ;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: auto;
+    border-radius: 3px;
+    background-color:rgb(245, 225, 188) ;
+    border: 1px solid rgb(194, 190, 190);
+
+
+}
+.Forgot_Password{
+    width: 370px;
+    height:280px ;
+    top: 50%;
+    left: 50%;
+    background-color: rgb(245, 225, 188);
+    transform: translate(-50%,-50%);
+    position: absolute;
+    color: rgb(0, 2, 3);
+    margin: auto;
+    border-radius: 3px;
+    border: 1px solid rgb(194, 190, 190);
+
+}
+h1{
+    text-align: center;
+    padding-top: 15px;
+
+}
+h4{
+    text-align: center;
+}
+form{
+    width: 300px;
+    margin-left: 20px;
+}
+form label{
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+
+}
+form input{
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 6px;
+    outline: none;
+}
+input[type="submit"]{
+    width: 320px;
+    height: 35px;
+    margin-top: 20px ;
+    border: none;
+    background-color: rgb(60, 161, 207);
+    color: white;
+    font-size: 18px;
+
+}
+p{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 15px;
+
+}
+.par{
+   text-align: center;
+   font-size: 15px;
+    margin-top: -10px;
+}
+ a{
+    color:rgb(60, 161, 207) ;
+    text-decoration: none;
+
+}
+
+.icon{
+    text-align: center;
+}
+.icon i{
+    size:x-large;
+}
