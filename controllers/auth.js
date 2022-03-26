@@ -24,13 +24,13 @@ db.query('SELECT email FROM users WHERE email=?',[email],async(err,results)=>{
     }
     if(results.length>0){
         return res.render('sign_up',{
-            message:'the email is already in use'
+            message:'The email is already in use'
 
         })
 
     }else if(password!==confirmPassword){
         return res.render('sign_up',{
-            message:'passwords do not match'
+            message:'Passwords do not match'
         })
     }
    
@@ -41,7 +41,7 @@ db.query('SELECT email FROM users WHERE email=?',[email],async(err,results)=>{
     }else{
         console.log(results)
         return res.render('index',{
-            message:'Succestully! Your account has been created'
+            message:'Succesfully! account has created'
         })
     }
 

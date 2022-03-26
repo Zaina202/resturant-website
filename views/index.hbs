@@ -18,16 +18,13 @@
     <input type="password"placeholder="Password" name="password">
     <p class="par" ><a href="/forgot_pass">Forgot password ?</a></p>
     <input type="Submit" value="Submit"> 
-    
-     {{#if message}}
-        <h4>{{message}}</h4>
-        {{/if}} 
-        
+   
    </form> 
+   <div class="message1">
    {{#if message}}
         <h4>{{message}}</h4>
         {{/if}}
-        
+        </div>
    <p class="par"><br>Don't have an account? <a href="sign_up">Sign up</a></p>
    <div class="icon">
     <i class="fa fa-facebook-official"></i>

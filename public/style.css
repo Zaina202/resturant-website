@@ -5,9 +5,39 @@
     font-family: sans-serif;
 }
 body{
-    background:url('https://gcdnb.pbrd.co/images/Vt3N1yHOXLNM.jpg?o=1') ;
+    background:url('https://gcdnb.pbrd.co/images/4QxqIdzlYD21.jpg?o=1') ;
     background-size:cover ;
 }
+.message1{
+    position: absolute;
+    top: 77%;
+    left: 20%;
+}
+.message2{
+    position: absolute;
+    top: 69%;
+    left: 26%;
+}
+.message1 h4{
+    color: rgb(247, 28, 28);
+    font-size:small;
+}
+.message2 h4{
+    color: rgb(247, 28, 28);
+    font-size:small;
+}
+.welcom{
+    
+    position: absolute;
+    top: 50%;
+    left: 40%;
+}
+.welcom h1{
+    font-size: xx-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
 .sign_up{
     width: 360px;
     height: 620px;
@@ -16,7 +46,7 @@ body{
     left: 50%;
     transform: translate(-50%,-50%);
     margin: auto;
-    background-color: rgb(245, 225, 188);
+    background-color: rgb(243, 232, 212);
     border-radius: 3px;
     border: 1px solid rgb(194, 190, 190);
 }
@@ -29,7 +59,7 @@ body{
     transform: translate(-50%,-50%);
     margin: auto;
     border-radius: 3px;
-    background-color:rgb(245, 225, 188) ;
+    background-color:rgb(243, 232, 212) ;
     border: 1px solid rgb(194, 190, 190);
 
 
@@ -39,7 +69,7 @@ body{
     height:280px ;
     top: 50%;
     left: 50%;
-    background-color: rgb(245, 225, 188);
+    background-color: rgb(243, 232, 212);
     transform: translate(-50%,-50%);
     position: absolute;
     color: rgb(0, 2, 3);

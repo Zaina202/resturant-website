@@ -25,7 +25,7 @@ exports.register=(req,res)=>{
           });
         } else {
           return res.render("index", {
-            message: "password or email is incorrect"
+            message: "Password or email is incorrect"
           });
         }
       }
