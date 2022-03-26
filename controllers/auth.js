@@ -47,10 +47,5 @@ db.query('SELECT email FROM users WHERE email=?',[email],async(err,results)=>{
     });
  
 });
-// const form =docunent.queryselector(".index");
-// if (form) {
-//     const fields =["usernane", "password"];
-//     const validator =new Login( form, fields);
-// }
 
 }
