@@ -33,11 +33,7 @@ db.query('SELECT email FROM users WHERE email=?',[email],async(err,results)=>{
             message:'passwords do not match'
         })
     }
-    // if(password==NULL || results.length==0){
-    //     return res.render('sign_up',{
-    //         message:'some field required'
-    //     })
-    // }
+   
     let hashedpassword=await bcrypt.hash(password,8)
         db.query('INSERT INTO users SET?',{First_name:FName,Last_name:LName,email:email,password:hashedpassword},(err,results)=>{
     if(err){
@@ -52,10 +48,5 @@ db.query('SELECT email FROM users WHERE email=?',[email],async(err,results)=>{
     });
  
 });
-// const form =docunent.queryselector(".index");
-// if (form) {
-//     const fields =["usernane", "password"];
-//     const validator =new Login( form, fields);
-// }
 
 }

@@ -11,15 +11,23 @@
 <body>
   <div class="login">
    <h1><em>Login</em></h1>
-   <form>
+   <form action="/auth2/user"method="POST">
     <label for="">Email</label>
     <input type="email"placeholder="Email"  name="email"> 
     <label for="">Password</label>
     <input type="password"placeholder="Password" name="password">
     <p class="par" ><a href="/forgot_pass">Forgot password ?</a></p>
-    <input type="Submit" value="Submit">
+    <input type="Submit" value="Submit"> 
     
+     {{#if message}}
+        <h4>{{message}}</h4>
+        {{/if}} 
+        
    </form> 
+   {{#if message}}
+        <h4>{{message}}</h4>
+        {{/if}}
+        
    <p class="par"><br>Don't have an account? <a href="sign_up">Sign up</a></p>
    <div class="icon">
     <i class="fa fa-facebook-official"></i>
