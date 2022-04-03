@@ -78,6 +78,43 @@ body{
     border: 1px solid rgb(194, 190, 190);
 
 }
+.field-icon{
+    float: right;
+    margin-top: -25px;
+    margin-right: 5px;
+    position: relative;
+    z-index: 2;
+ }
+ #validation_box{
+     display: none; 
+    background-color: rgb(243, 232, 212);
+    border-radius: 3px;
+    border: 1px solid rgb(194, 190, 190);
+
+    position: absolute;
+    top:50%;
+    left:65%;
+    padding: 10px;
+    margin-top:4px;
+    text-align:center;
+ }
+ .valid{
+    color:#7fcf35
+}
+
+.valid:before{
+position: relative;
+ Left: -8px;
+ content: url(true.png);
+ top:3px;
+}
+
+.invalid::before{
+    position: relative;
+     Left: -8px;
+     top: 3px;
+     content: url(false.png);
+}
 h1{
     text-align: center;
     padding-top: 15px;

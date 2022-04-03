@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {{!-- <script src="main.js"></script> --}}
   <link rel="stylesheet" href="/style.css">
     <title>sign up</title>
 </head>
@@ -20,6 +22,8 @@
            <input type="email" name="email" placeholder="Email"> 
            <label for="password">Password</label>
            <input type="password" name="password" placeholder="Password">
+                          <span toggle="#psw" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+
            <label for="Confirm Password">Confirm Password</label>
            <input type="password" name="confirmPassword" placeholder="Confirm Password">
            <input type="submit"value="submit">  
@@ -36,7 +40,14 @@
         <p class="par">Already have an account? <a href="/">Log in</a></p>
         </p>
 
-
+    
     </div>
+    <div  id="validation_box">
+<h4>Password Must Contain The Following</h4>
+<p id="letter" class="invalid">Lowercase Letters</p>
+<p id="capital" class="invalid">Uppercase Letters</p>
+<p id="number" class-"invalid">A Number</p>
+<p id="length" class="invalid">Atleast 8 Characterk/p>
+</div>
 </body>
 </html>
