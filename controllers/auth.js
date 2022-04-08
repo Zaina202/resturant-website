@@ -60,6 +60,7 @@ exports.register=(req,res)=>{
     });
 
 }
+<<<<<<< HEAD
 
 exports.ver =async (req, res)=>{
     console.log(`Id ${req.params.userId}`)
@@ -96,3 +97,5 @@ exports.ver =async (req, res)=>{
         }
     })
 }
+=======
+>>>>>>> b407a48368daa2097724a8b5e719657641e3b946
