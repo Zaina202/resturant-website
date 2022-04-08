@@ -17,12 +17,10 @@ const db=mysql.createConnection({
 
 const publicDirectory= path.join(__dirname,'./public')
 app.use(express.static(publicDirectory))
-
 app.use(express.urlencoded({extended:false}));
 app.use(express.json())
 
 app.set('view engine','hbs');
-
 db.connect((err)=>{
     if(err){
         console.log(err)
@@ -30,8 +28,6 @@ db.connect((err)=>{
         console.log("Mysql Connected...")
     }
 })
-
-
 
 app.use('/',require('./routes/pages'))
 app.use('/auth',require('./routes/auth'))
