@@ -134,12 +134,16 @@ form label{
 }
 form input{
     width: 100%;
-    padding: 8px;
+    padding: 8px 8px 8px 30px;
     border: none;
     border: 1px solid gray;
     border-radius: 6px;
     outline: none;
 }
+.input-field{
+    position: relative;
+}
+
 input[type="submit"]{
     width: 320px;
     height: 35px;
@@ -149,6 +153,33 @@ input[type="submit"]{
     color: white;
     font-size: 18px;
 
+}
+i{
+    position: absolute;
+    left: 10px;
+    top: 9px;
+}
+
+i:nth-child(4){
+    left:270px;
+    cursor: pointer;
+}
+.btn{
+    width: 150px;
+    height: 45px;
+    border-radius: 45px;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+.btn:hover{
+    background: #2ceae5;
+    transform: translateY(-7px);
+    color: #fff;
+    box-shadow: 0px 10px 25px rgba(46, 223, 229, 0.445);
 }
 p{
     text-align: center;
@@ -170,6 +201,6 @@ p{
 .icon{
     text-align: center;
 }
-.icon i{
+/* .icon i{
     size:x-large;
-}
+} */
