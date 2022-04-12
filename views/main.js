@@ -1,11 +1,23 @@
-const togglePassword=document.querySelector("togglePassword");
+"use strict";
+(function(){
+    window.addEventListener("load",init);
+
+    function init(){
+    igon.addEventListener("click",icon);
+    }
+
+function icon(){
+    const togglePassword=document.querySelector("#togglePassword");
     const password=document.querySelector("#password");
-    togglePassword.addEventListener("click",function(){
-        const type=password
-        .getAttribute("type")==="password"?"text":"password";
+    togglePassword.addEventListener("click",function(){ 
+        const type=password.getAttribute("type")==="password" ? "text":"password";
         password.setAttribute("type",type);
         this.classList.toggle("fa-eye-slash");
-    })
+
+})();
+}
+});
+
 // $(".toggle-password").click(function(){
 //     $(this).toggleClass("fa-eye fa-eye-slash");
 //     var input =$($(this).attr("toggle"));

@@ -7,42 +7,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
       
-{{!-- <script src="main.js">
-</script> --}}
-<script>
-    const togglePassword=document.querySelector("togglePassword");
-    const password=document.querySelector("#password");
-    togglePassword.addEventListener("click",function(){
-        const type=password
-        .getAttribute("type")==="password"?"text":"password";
-        password.setAttribute("type",type);
-        this.classList.toggle("fa-eye-slash");
-    })
-</script>
+
 
     <title>Log_in</title>
     <link rel="stylesheet" href="/style.css">
+    <script src="main.js"></script>
 </head>
 <body>
+  
   <div class="login">
    <h1><em>Login</em></h1>
    <form action="/auth2/user"method="POST">
    
-    <label for="">Email</label>
+    <label for=""> <br></label>
         <div class="input-field">
 
     <input type="email"placeholder="Email"  name="email" > 
     <br />
     <i class="fa fa-user"></i>
-    <label for="">Password</label>
+    <label for=""> <br></label>
     <div class="input-field">
     <input type="password"placeholder="Password" name="password" id="password">
     <br />
     
                {{!-- <span toggle="#psw" class="fa fa-fw fa-eye field-icon toggle-password"></span> --}}
-                <i class="fa fa-lock" aria-hidden="true"></i>
-
-               <i class="fa fa-eye" id="togglePsssword" hidden="true"></i>
+            <i class="fa fa-lock" aria-hidden="true"></i>
+            <i class="fa fa-eye" id="togglePassword" aria-hidden="true"></i>
     </div>
 
     <p class="par" ><a href="/forgot_pass">Forgot password ?</a></p>
