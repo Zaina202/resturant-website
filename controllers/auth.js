@@ -35,17 +35,11 @@ exports.register=(req,res)=>{
             return res.render('sign_up',{
                 message:'Passwords do not match'
             })   
+        }else if(FName===""||LName===""||email===""||password===""||confirmPassword===""){
+            return res.render('sign_up',{
+                message:'plese enter values'   
+            })
         }else{
-        db.query('SELECT * FROM users',async(err,results)=>{
-            if(err){
-                console.log(err)
-            }else if(FName===""||LName===""||email===""||password===""||confirmPassword==="") {
-                return res.render('sign_up',{
-                    message:'plese enter values'
-                })
-            }
-        })
-            }
         let hashedpassword=await bcrypt.hash(password,8)
             db.query('INSERT INTO users SET?',{First_name:FName,Last_name:LName,email:email,password:hashedpassword},(err,results)=>{
         if(err){
@@ -54,7 +48,8 @@ exports.register=(req,res)=>{
         else{
             console.log(results)
         }
-    });
+            });
+        }
 
         db.query('SELECT ID FROM users WHERE email=?',[email],async (error, result)=>{
             if(error){
