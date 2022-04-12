@@ -15,6 +15,7 @@ const db=mysql.createConnection({
 
 
 const { DEC8_BIN } = require("mysql/lib/protocol/constants/charsets")
+const async = require("hbs/lib/async")
 
 exports.register=(req,res)=>{
     console.log(req.body)
@@ -33,14 +34,24 @@ exports.register=(req,res)=>{
         }else if(password!==confirmPassword){
             return res.render('sign_up',{
                 message:'Passwords do not match'
-            })
-        }
-    
+            })   
+        }else{
+        db.query('SELECT * FROM users',async(err,results)=>{
+            if(err){
+                console.log(err)
+            }else if(FName===""||LName===""||email===""||password===""||confirmPassword==="") {
+                return res.render('sign_up',{
+                    message:'plese enter values'
+                })
+            }
+        })
+            }
         let hashedpassword=await bcrypt.hash(password,8)
             db.query('INSERT INTO users SET?',{First_name:FName,Last_name:LName,email:email,password:hashedpassword},(err,results)=>{
         if(err){
             console.log(err)
-        }else{
+        }
+        else{
             console.log(results)
         }
     });
@@ -48,10 +59,11 @@ exports.register=(req,res)=>{
         db.query('SELECT ID FROM users WHERE email=?',[email],async (error, result)=>{
             if(error){
                 console.log(err)
-            }else{
+            }
+            else{
                 sendEmail.emailVer(email, result[0].ID)
                 return res.render('index',{
-                    message:'Succesfully! account has created Check your email inbox'
+                    message:'Succesfully! account has created '
                 })
             }
         })
