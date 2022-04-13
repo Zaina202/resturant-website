@@ -88,11 +88,3 @@ button:hover{
     width: 420;
     height: 300;
 }
-.hr{
-    font-size: large;
-    color: black;
-    margin-left: 30px;
-    background-color: rgba(255, 255, 255, 0);
-    border: 1px solid rgba(0, 0, 0, 0);
-    margin-top: 22.5px;
-}
