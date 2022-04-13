@@ -14,5 +14,13 @@ router.get("/forgot_pass",(req,res)=>{
     res.render("forgot_pass")
 });
 
+router.get("/visit", (req, res)=>{
+    res.render("visit")
+})
+
+router.get("/location", (req, res)=>{
+    res.render("location")
+})
+
 
 module.exports=router

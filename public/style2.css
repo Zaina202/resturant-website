@@ -67,7 +67,11 @@ width: 1100px;
     border-radius: 150px;
 
 }
-button{
+a{
+
+margin-top: 25px;
+}
+button,a{
     font-size: large;
     color: black;
     margin-left: 30px;
@@ -75,6 +79,21 @@ button{
     border: 1px solid rgba(0, 0, 0, 0);
 
 }
-button:hover {
+button:hover, a{
     opacity: 0.7;
   }
+  .d{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.534);
+}
+.w{
+   padding: 10px 0 0 15px;
+    width: 420;
+    height: 300;
+}
+.map{
+    width:1310;
+    height: 600;
+    padding: 15px;
+}
