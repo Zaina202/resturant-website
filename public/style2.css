@@ -51,7 +51,6 @@ width: 1100px;
   }
 .fa-facebook {
     padding: 3px; 
-
     background: #3B5998;
     color: white;
   }
@@ -67,11 +66,8 @@ width: 1100px;
     border-radius: 150px;
 
 }
-a{
 
-margin-top: 25px;
-}
-button,a{
+button{
     font-size: large;
     color: black;
     margin-left: 30px;
@@ -79,21 +75,24 @@ button,a{
     border: 1px solid rgba(0, 0, 0, 0);
 
 }
-button:hover, a{
+button:hover{
     opacity: 0.7;
   }
   .d{
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.534);
+
 }
 .w{
    padding: 10px 0 0 15px;
     width: 420;
     height: 300;
 }
-.map{
-    width:1310;
-    height: 600;
-    padding: 15px;
+.hr{
+    font-size: large;
+    color: black;
+    margin-left: 30px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid rgba(0, 0, 0, 0);
+    margin-top: 22.5px;
 }
