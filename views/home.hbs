@@ -9,11 +9,15 @@
     <link rel="stylesheet" href="/style2.css">
 </head>
 <body>
-    
+    <script>
+        let toggleButton=document.querySelector(.'container');
+        toggleButton.onclick=function(){
+            toggleButton.classList.toggle("active");
+        }
+    </script>
    <div class="container">
     <div class="title">
-        <!-- <h1 ><Em>White<br>
-            lounge <i class="fa fa-cutlery"></i></Em></h1> -->
+        
             <h1><em>WELCOME !<br><br></em></h1>
             <img src="https://scontent.fjrs1-2.fna.fbcdn.net/v/t1.6435-9/192882024_105769938382721_8408343321821855858_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=hHrsucq2x8YAX-5y0ST&_nc_ht=scontent.fjrs1-2.fna&oh=00_AT83ijIQnksf24jyNNpTWoWwPwAtYskC8dL09by4MmVhoA&oe=6275E483"alt="logo" width="290px" height="290px">
          
@@ -27,7 +31,14 @@
             <button>Location</button>
             <button><a href="https://www.facebook.com/Whiteloungepal"target="_blank" class="fa fa-facebook"></a></button>
             <button><a href="https://www.instagram.com/white_lounge/?hl=en"target="_blank" class="fa fa-instagram"></a></button>
-
+            <div class="container">
+            <p class="drop">Profile</p>
+            <div class="drop-down">
+                <ul>
+                    <li>Account</li>
+                    <li>logout</li>
+                </ul>
+            </div>
 
 
         </div>
