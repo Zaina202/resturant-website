@@ -18,9 +18,7 @@ router.get("/visit", (req, res)=>{
     res.render("visit")
 })
 
-router.get("/location", (req, res)=>{
-    res.render("location")
-})
+
 
 
 module.exports=router
