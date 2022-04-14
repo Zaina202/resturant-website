@@ -20,7 +20,9 @@ router.get("/visit", (req, res)=>{
 router.get("/Booking", (req, res)=>{
     res.render("Booking")
 })
-
+router.get("/tables", (req, res)=>{
+    res.render("Booking")
+})
 
 
 module.exports=router
