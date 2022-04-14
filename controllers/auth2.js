@@ -12,7 +12,7 @@ const db=mysql.createConnection({
 
 })
 const { DEC8_BIN } = require("mysql/lib/protocol/constants/charsets")
-
+const async = require("hbs/lib/async")
 exports.register=(req,res)=>{
     const email=req.body.email;
     const password=req.body.password;
