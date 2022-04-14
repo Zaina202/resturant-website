@@ -51,7 +51,6 @@ width: 1100px;
   }
 .fa-facebook {
     padding: 3px; 
-
     background: #3B5998;
     color: white;
   }
@@ -61,12 +60,94 @@ width: 1100px;
     color: white;
   }
   
+  .Booking{
+    width: 500px;
+    height: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: auto;
+    background-color: rgba(111, 110, 108, 0.534);
+    border-radius: 3px;
+    border: 1px solid rgb(194, 190, 190);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    color: rgb(0, 0, 0);
+
+}
+.Booking h1{
+  display: inline;
+  padding-left: 2%;
+}
+#A{
+  width: 30%;
+} 
+.customers{
+  text-align: center;
+  padding: 10px;
 
 
+}
+
+}
+.date{
+    text-align: center;
+    width: 72%;
+}
+/* .date #start{
+    display: block; 
+   margin-right: auto;
+ margin-left: 10%; 
+} */
+
+.time{
+    text-align: center;
+    width: 80%;
+    
+}
+/* .time #appt{
+    margin-left: 10%; 
+    padding-left: 5%;
+} */
+.comments textarea{
+    width: 45%;
+    text-align: center; 
+
+}
+.comments{
+    text-align: center;
+    left: 50%;
+    right: 50%; 
+    top: 30%;
+}
+#submit{
+    background-color: rgb(41, 41, 40);
+    padding: 2%;  
+    padding-left: 5%;  
+}
 .title img{
     border-radius: 150px;
 
 }
+.titleB img{
+  border-radius: 150px;
+ padding: 2%;
+
+}
+.container{
+  display: flex;
+}
+.head{
+  display: flex;
+  position: absolute;
+  top: 30px;
+  left: 40%;
+  color: black;
+height: 70px;
+width: 1100px;
+}
+
 button{
     font-size: large;
     color: black;
@@ -76,9 +157,10 @@ button{
     cursor: pointer;
 
 }
-button:hover {
+button:hover{
     opacity: 0.7;
   }
+<<<<<<< HEAD
   .drop-down{
     border: 1px solid;
     width: 150px;
@@ -136,3 +218,15 @@ button:hover {
     top:17px;
     transform: rotate(-225deg);
   }
+=======
+  .d{
+    height: 100%;
+    width: 100%;
+
+}
+.w{
+   padding: 10px 0 0 15px;
+    width: 420;
+    height: 300;
+}
+>>>>>>> 3ae767796c8f3e91f2221fa950b2db96a5d06be8

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/style2.css">
+    <title>Booking</title>
+</head>
+
+<body>  
+
+        
+    </dive>
+          <div class="titleB">
+                <img src="https://scontent.fjrs1-2.fna.fbcdn.net/v/t1.6435-9/192882024_105769938382721_8408343321821855858_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=hHrsucq2x8YAX-5y0ST&_nc_ht=scontent.fjrs1-2.fna&oh=00_AT83ijIQnksf24jyNNpTWoWwPwAtYskC8dL09by4MmVhoA&oe=6275E483"alt="logo" width="290px" height="290px">
+            <dive class="contant">
+        <div class="head">
+            <button>Home</button>
+            <button>Menu</button>
+            <button>Booking</a></button>
+            <button>Visit</button>
+            <button>Location</button>
+            <button><a href="https://www.facebook.com/Whiteloungepal"target="_blank" class="fa fa-facebook"></a></button>
+            <button><a href="https://www.instagram.com/white_lounge/?hl=en"target="_blank" class="fa fa-instagram"></a></button>
+
+        </div>
+    </div>
+    <form action="/auth3/tables" method="POST">
+    <div class="Booking">
+
+                <h1>Table Booking </h1>
+        <br>
+        <div class="customers">
+            <label for="numberofcustomers">number of customers (between 1 and 7):  </label>
+            <input type="number" id="A" name="customers" value="number of customers (between 1 and 7):" min="1" max="7" >  
+        </div>
+       <br>
+
+        <div class="date">
+         <label for="start">a time for your reservation: </label>
+       <input type="date" id="start" name="tody"
+       value="2022-01-01"
+       min="2022-01-01" max="2023-12-31">
+
+        
+        </div>
+        <br>
+        <div class="time">
+        restaurant hours are 9am to 11pm
+        <input type="time" id="appt" name="appt"
+        min="09:00" max="23:00" required>
+          
+        </div>
+        <br>
+        <div class="comments">
+        Say something if you want...
+          <textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1em;">
+          Comments (optional)
+            </textarea>
+        </div>
+        <br>
+            <input id="submit" type="submit" value="Submit">
+    </div>
+    </form>
+</body>
+</html>
