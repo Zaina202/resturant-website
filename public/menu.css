@@ -1,0 +1,14 @@
+
+body{
+  background:url(https://i.pinimg.com/originals/08/0f/70/080f70c1ae6fc9f9830df38071af8a6d.jpg);
+  background-size:cover ;
+}
+.img{
+  width: 300px;
+  float: right;
+}
+    .div{
+      width: 90%;
+      border:5px solid black;
+      margin:20px;
+    }

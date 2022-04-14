@@ -30,6 +30,8 @@ router.get("/Booking", (req, res)=>{
  router.get("/tables", (req, res)=>{
     res.render("Booking")
  })
-
+ router.get("/menu", (req, res)=>{
+    res.render("menu")
+ })
 
 module.exports=router
