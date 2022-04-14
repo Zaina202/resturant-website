@@ -59,8 +59,9 @@ width: 1100px;
     background: #da286c;
     color: white;
   }
-  
-  .Booking{
+  /* booking--------------------------- */
+
+  .Table{
     width: 500px;
     height: 350px;
     position: absolute;
@@ -76,68 +77,55 @@ width: 1100px;
     color: rgb(0, 0, 0);
 
 }
-.Booking h1{
-  display: inline;
-  padding-left: 2%;
-}
-#A{
-  width: 30%;
-} 
-.customers{
+.Table h1{
   text-align: center;
-  padding: 10px;
-
-
 }
-
+.column{
+  display: flex;
 }
-.date{
-    text-align: center;
-    width: 72%;
+.column h4{
+  margin-left: 50px;
 }
-/* .date #start{
-    display: block; 
-   margin-right: auto;
- margin-left: 10%; 
-} */
-
-.time{
-    text-align: center;
-    width: 80%;
-    
+input{
+  width: 200px;
+  height: 40px;
+  position: relative;
+  left: 50px;
+  color: black;
 }
-/* .time #appt{
-    margin-left: 10%; 
-    padding-left: 5%;
-} */
-.comments textarea{
-    width: 45%;
-    text-align: center; 
+label{
+  width: 200px;
+}
+a{
+  color: black;
+  text-decoration: none;
 
 }
-.comments{
-    text-align: center;
-    left: 50%;
-    right: 50%; 
-    top: 30%;
-}
-#submit{
-    background-color: rgb(41, 41, 40);
-    padding: 2%;  
-    padding-left: 5%;  
-}
-.title img{
-    border-radius: 150px;
 
-}
-.titleB img{
-  border-radius: 150px;
- padding: 2%;
-
-}
 .container{
   display: flex;
 }
+ #submit{
+    background-color: rgb(41, 41, 40);
+    padding: 7px  ;  
+    width: 100px;
+    margin-left: 250px;
+    color: white;
+    font-weight: bold;
+}
+#part{
+  left: 30%;
+}
+.titleB img{
+  width: 120px;
+  height: 120px;
+  margin: 10px;
+  border-radius: 150px;
+
+}
+
+/* ---------------- */
+
 .head{
   display: flex;
   position: absolute;
@@ -160,7 +148,6 @@ button{
 button:hover{
     opacity: 0.7;
   }
-<<<<<<< HEAD
   .drop-down{
     border: 1px solid;
     width: 150px;
@@ -218,15 +205,16 @@ button:hover{
     top:17px;
     transform: rotate(-225deg);
   }
-=======
-  .d{
-    height: 100%;
-    width: 100%;
+  .imgContainer{
+    
+    margin-left: 50px;
 
+}
+.title img{
+border-radius: 150px;
 }
 .w{
    padding: 10px 0 0 15px;
     width: 420;
     height: 300;
 }
->>>>>>> 3ae767796c8f3e91f2221fa950b2db96a5d06be8

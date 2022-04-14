@@ -1,67 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/style2.css">
-    <title>Booking</title>
 </head>
 
 <body>  
 
         
-    </dive>
           <div class="titleB">
                 <img src="https://scontent.fjrs1-2.fna.fbcdn.net/v/t1.6435-9/192882024_105769938382721_8408343321821855858_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=hHrsucq2x8YAX-5y0ST&_nc_ht=scontent.fjrs1-2.fna&oh=00_AT83ijIQnksf24jyNNpTWoWwPwAtYskC8dL09by4MmVhoA&oe=6275E483"alt="logo" width="290px" height="290px">
             <dive class="contant">
-        <div class="head">
-            <button>Home</button>
+        <div class="head"id="part">
+           <button><a href="/home"target="_blank" >Home</a></button>
             <button>Menu</button>
-            <button>Booking</a></button>
-            <button>Visit</button>
-            <button>Location</button>
+            <button>Booking</button>
+            <button><a href="/visit"target="_blank" >Visit</a></button>
+            <button><a href="https://www.google.com/maps/dir/32.2240512,35.2354304/32.2159963,35.2372675/@32.2200835,35.247805,15z/data=!3m1!4b1!4m4!4m3!1m1!4e1!1m0"target="_blank" >location</a></button>              
             <button><a href="https://www.facebook.com/Whiteloungepal"target="_blank" class="fa fa-facebook"></a></button>
             <button><a href="https://www.instagram.com/white_lounge/?hl=en"target="_blank" class="fa fa-instagram"></a></button>
 
         </div>
     </div>
     <form action="/auth3/tables" method="POST">
-    <div class="Booking">
-
-                <h1>Table Booking </h1>
+    <div class="Table">
+        <h1><em>Booking<hr></em></h1>
         <br>
-        <div class="customers">
-            <label for="numberofcustomers">number of customers (between 1 and 7):  </label>
+        <div class="column">
+            <label><h4>Number of customers</h4></label>
             <input type="number" id="A" name="customers" value="number of customers (between 1 and 7):" min="1" max="7" >  
         </div>
        <br>
 
-        <div class="date">
-         <label for="start">a time for your reservation: </label>
-       <input type="date" id="start" name="tody"
+        <div class="column">
+<label><h4>Date</h4></label>    
+   <input type="date" id="start" name="tody"
        value="2022-01-01"
        min="2022-01-01" max="2023-12-31">
 
         
         </div>
         <br>
-        <div class="time">
-        restaurant hours are 9am to 11pm
+        <div class="column">
+       <label><h4>Time (9am to 11pm)</h4></label> 
         <input type="time" id="appt" name="appt"
         min="09:00" max="23:00" required>
           
         </div>
         <br>
-        <div class="comments">
-        Say something if you want...
-          <textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1em;">
-          Comments (optional)
-            </textarea>
+        <div class="column">
+           <label><h4>Note...</h4></label> 
+          <input name="comments"  >
+            </input>
         </div>
         <br>
+        <div class="column">
             <input id="submit" type="submit" value="Submit">
+            </div>
     </div>
     </form>
 </body>

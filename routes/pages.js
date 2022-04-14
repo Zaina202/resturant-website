@@ -19,12 +19,17 @@ router.get("/forgot_pass",(req,res)=>{
 router.get("/visit", (req, res)=>{
     res.render("visit")
 })
+router.get("/home", (req, res)=>{
+    res.render("home")
+})
+
 router.get("/Booking", (req, res)=>{
     res.render("Booking")
 })
-router.get("/tables", (req, res)=>{
+
+ router.get("/tables", (req, res)=>{
     res.render("Booking")
-})
+ })
 
 
 module.exports=router
