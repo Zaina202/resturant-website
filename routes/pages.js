@@ -17,7 +17,9 @@ router.get("/forgot_pass",(req,res)=>{
 router.get("/visit", (req, res)=>{
     res.render("visit")
 })
-
+router.get("/Booking", (req, res)=>{
+    res.render("Booking")
+})
 
 
 
