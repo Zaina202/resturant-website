@@ -29,8 +29,9 @@ exports.register=(req,res)=>{
             else{
                 console.log(results)
             }
+            res.render("menu")
                 });
-       
+                
 
 
 
