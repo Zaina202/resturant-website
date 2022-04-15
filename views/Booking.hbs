@@ -34,7 +34,7 @@
 
         <div class="column">
 <label><h4>Date</h4></label>    
-   <input type="date" id="start" name="tody"
+   <input type="date" id="start" name="Date"
        value="2022-01-01"
        min="2022-01-01" max="2023-12-31">
 
@@ -43,7 +43,7 @@
         <br>
         <div class="column">
        <label><h4>Time (9am to 11pm)</h4></label> 
-        <input type="time" id="appt" name="appt"
+        <input type="time" id="appt" name="Time"
         min="09:00" max="23:00" required>
           
         </div>
@@ -55,7 +55,7 @@
         <br>
         <div class="column">
            <label><h4>Note...</h4></label> 
-          <input name="comments"  >
+          <input name="Note"  >
             </input>
         </div>
         <br>
@@ -64,5 +64,8 @@
             </div>
     </div>
     </form>
+    {{#if message}}
+        <h4>{{message}}</h4>
+        {{/if}}
 </body>
 </html>

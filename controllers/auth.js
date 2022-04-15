@@ -19,7 +19,6 @@ const async = require("hbs/lib/async")
 
 exports.register=(req,res)=>{
     console.log(req.body)
-
     const{FName,LName,email,password,confirmPassword}=req.body
     db.query('SELECT email FROM users WHERE email=?',[email],async(err,results)=>{
         if(err){
