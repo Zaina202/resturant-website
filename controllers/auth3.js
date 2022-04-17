@@ -22,8 +22,8 @@ exports.register=(req,res)=>{
         if(err){
             console.log(err)
         }
-        console.log(results)
-         if(results.length > 1 ){
+      
+         if(results.length > 20 ){
              db.query('DELETE FROM tables WHERE table_id = ?', [req.params.table_id], (err, rows) => {
 
                 if(err){
@@ -35,7 +35,11 @@ exports.register=(req,res)=>{
                 }
                 });
             
-         }
+         }else if(Date===""||Time===""||customers===""){
+            return res.render('Booking',{
+                message:'plese enter values'   
+            })
+        }
          else{
          db.query('INSERT INTO tables SET?',{date:Date,time:Time,num_of_people:customers,note:Note},(err,results)=>{
                  if(err){
