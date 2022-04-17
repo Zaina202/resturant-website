@@ -17,7 +17,7 @@ exports.register=(req,res)=>{
     console.log(req.body)
     const{Date,Time,customers,Note}=req.body
    
-    db.query('SELECT date,time FROM tables WHERE date=? AND time=?',[Date,Time],async(err,results)=>{
+    db.query('SELECT * FROM tables WHERE date=? AND time=?',[Date,Time],async(err,results)=>{
         if(err){
             console.log(err)
         }

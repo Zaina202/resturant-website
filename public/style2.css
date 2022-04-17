@@ -136,16 +136,16 @@ height: 70px;
 width: 1100px;
 }
 
-button{
+.z{
     font-size: large;
     color: black;
     margin-left: 30px;
     background-color: rgba(255, 255, 255, 0);
     border: 1px solid rgba(0, 0, 0, 0);
     cursor: pointer;
-
 }
-button:hover{
+
+.z:hover{
     opacity: 0.7;
   }
   .drop-down{
@@ -155,7 +155,7 @@ button:hover{
     display: none;
     margin:10px 0px;
   }
-   .drop{
+    .but{
     border:none;
     left: 150px;
     top:15px;
@@ -170,7 +170,7 @@ button:hover{
   font-size: medium;
   font-weight: bold;
   }
-  .drop::before{
+   .but::before{
     content:"";
     position: absolute;
     width: 7px;
@@ -201,7 +201,7 @@ button:hover{
   .container .active .drop-down{
     display: block;
   }
-  .container .active .drop::before{
+  .container .active .but::before{
     top:17px;
     transform: rotate(-225deg);
   }

@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
       
 
 
     <title>Log_in</title>
     <link rel="stylesheet" href="/style.css">
-    <script src="main.js"></script>
 </head>
 <body>
-  
+  <div class="titleB">
+                <img src="https://scontent.fjrs1-2.fna.fbcdn.net/v/t1.6435-9/192882024_105769938382721_8408343321821855858_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=hHrsucq2x8YAX-5y0ST&_nc_ht=scontent.fjrs1-2.fna&oh=00_AT83ijIQnksf24jyNNpTWoWwPwAtYskC8dL09by4MmVhoA&oe=6275E483"alt="logo" width="290px" height="290px">
+        </div>
   <div class="login">
    <h1><em>Login</em></h1>
    <form action="/auth2/user"method="POST">
@@ -34,7 +34,12 @@
             <i class="fa fa-lock" aria-hidden="true"></i>
             <i class="fa fa-eye" id="togglePassword" aria-hidden="true"></i>
     </div>
-
+         {{!-- <div class="input-field">
+           <input type="password" name="password" placeholder="Password"id="password">
+                       <i class="fa fa-eye" id="togglePassword" aria-hidden="true"></i>
+                          <br />
+               {{!-- <span toggle="#psw" class="fa fa-fw fa-eye field-icon toggle-password"></span> --}}
+</div> --}}
     <p class="par" ><a href="/forgot_pass">Forgot password ?</a></p>
     <input type="Submit" value="Submit" class="btn"> 
    
@@ -54,19 +59,7 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script>
-    $(".toggle-password").click(function(){
-    $(this).toggleClass("fa-eye fa-eye-slash");
-    var input =$($(this).attr("toggle"));
-    console.log(input);
-    if(input.attr("type")=="password"){
-        input.attr("type", "text");
-    }else{
-        input.attr("type","password");
-    }
-});
-
-</script>
+<script src="/main.js"></script>
 
 </body>
 </html>
