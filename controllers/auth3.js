@@ -24,7 +24,8 @@ exports.register=(req,res)=>{
         }
         console.log(results)
          if(results.length > 1 ){
-             db.query('DELETE * FROM tables WHERE time=?'),[Time],(err,results)=>{
+             db.query('DELETE FROM tables WHERE table_id = ?', [req.params.table_id], (err, rows) => {
+
                 if(err){
                     console.log(err)
                 }else{
@@ -32,8 +33,7 @@ exports.register=(req,res)=>{
                         message:'The restaurant is full at this time'
                     })
                 }
-
-             }
+                });
             
          }
          else{
