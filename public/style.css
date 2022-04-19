@@ -75,7 +75,7 @@ body{
     height:280px ;
     top: 50%;
     left: 50%;
-    background-color: rgb(243, 232, 212);
+    background-color:rgb(87, 85, 81, 0.534) ;
     transform: translate(-50%,-50%);
     position: absolute;
     color: rgb(0, 2, 3);
@@ -208,7 +208,13 @@ p{
     text-decoration: none;
 
 }
-
+.titleB img{
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+    border-radius: 150px;
+  
+  }
 .icon{
     text-align: center;
 }
