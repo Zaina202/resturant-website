@@ -5,16 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>Home page</title>
     <link rel="stylesheet" href="/style2.css">
 </head>
 <body>
-    {{!-- <script>
-        let toggleButton=document.querySelector(.'container');
-        toggleButton.onclick=function(){
-            toggleButton.classList.toggle("active");
-        }
-    </script> --}}
+   
    <div class="container">
     <div class="title">
         
@@ -31,16 +27,27 @@
             <button class="z"><a href="https://www.google.com/maps/dir/32.2240512,35.2354304/32.2159963,35.2372675/@32.2200835,35.247805,15z/data=!3m1!4b1!4m4!4m3!1m1!4e1!1m0"target="_blank" >location</a></button>              
             <button class="z"><a href="https://www.facebook.com/Whiteloungepal"target="_blank" class="fa fa-facebook"></a></button>
             <button class="z"><a href="https://www.instagram.com/white_lounge/?hl=en"target="_blank" class="fa fa-instagram"></a></button>
-            <div class="container">
-            <button class="but">Profile</button>
-            <div class="drop-down">
-                <ul>
-                    <li>Account</li>
-                    <li>logout</li>
-                </ul>
-            </div>
-
-        </div>
+            <nav>
+    <menu class="containerr">
+      <menuitem id="demo1">
+        <a ><i class="fa fa-user"></i></a>
+        <menu>
+               <menuitem>
+                  <a>settings</a>
+                  <menu>
+                     <menuitem><a>Acount</a></menuitem>
+                     <menuitem><a>Discount</a></menuitem>
+                  </menu>  
+               </menuitem>
+          <menuitem><a>help</a></menuitem>
+          <menuitem id="demo2">
+            <a href="/index">Log Out</a>
+           
+          </menuitem>
+        </menu>
+      </menuitem>
+    </menu>
+  </nav>
         
     </div>
     </div>

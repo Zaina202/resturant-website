@@ -36,7 +36,7 @@ exports.register=(req,res)=>{
             })   
         }else if(FName===""||LName===""||email===""||password===""||confirmPassword===""){
             return res.render('sign_up',{
-                message:'plese enter values'   
+                message:'Please enter your information'   
             })
         }else{
         let hashedpassword=await bcrypt.hash(password,8)
