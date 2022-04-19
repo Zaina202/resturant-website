@@ -11,6 +11,10 @@ router.get("/sign_up",(req,res)=>{
  
     res.render("sign_up")
 });
+router.get("/index",(req,res)=>{
+ 
+    res.render("index")
+});
 router.get("/forgot_pass",(req,res)=>{
  
     res.render("forgot_pass")

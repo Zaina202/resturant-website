@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     {{!-- <script src="main.js"></script> --}}
   <link rel="stylesheet" href="/style.css">
     <title>sign up</title>
 </head>
 
 <body>
+    <div class="titleB">
+                <img src="https://scontent.fjrs1-2.fna.fbcdn.net/v/t1.6435-9/192882024_105769938382721_8408343321821855858_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=hHrsucq2x8YAX-5y0ST&_nc_ht=scontent.fjrs1-2.fna&oh=00_AT83ijIQnksf24jyNNpTWoWwPwAtYskC8dL09by4MmVhoA&oe=6275E483"alt="logo" width="290px" height="290px">
+        </div>
     <div class="sign_up">
         <h1><em>Sign Up</em></h1>
         <form action="/auth/sign_up"method="POST">
@@ -21,9 +24,14 @@
            <label for="email">Email</label>
            <input type="email" name="email" placeholder="Email"> 
            <label for="password">Password</label>
-           <input type="password" name="password" placeholder="Password">
-                          <span toggle="#psw" class="fa fa-fw fa-eye field-icon toggle-password"></span>
-
+           <div class="input-field">
+    <input type="password"placeholder="Password" name="password" id="password">
+    <br />
+    
+            <i class="fa fa-lock" style="display: none;" aria-hidden="true"></i>
+            <i class="fa fa-eye" id="togglePassword" aria-hidden="true"></i>
+    </div>
+    
            <label for="Confirm Password">Confirm Password</label>
            <input type="password" name="confirmPassword" placeholder="Confirm Password">
            <input type="submit"value="submit"class="btn">  
@@ -49,5 +57,7 @@
 <p id="number" class-"invalid">A Number</p>
 <p id="length" class="invalid">Atleast 8 Characterk/p>
 </div>
+<script src="/main.js"></script>
+
 </body>
 </html>
