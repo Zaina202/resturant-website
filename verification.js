@@ -31,7 +31,7 @@ let mailOptions ={
   to: `${email}`,
   subject:'Email verification',
   html: `<p>Complete your sign up into your account. </p>
-  <p>This link expires in 6 hours.</p> <a href = ${currentURL + "/auth/verify/"+ userId + "/" + uniqueString}> Click here to complete the process</a>`,
+  <p>This link expires in 6 hours.</p> <a href = ${currentURL + "auth/verify/"+ userId + "/" + uniqueString}> Click here to complete the process</a>`,
 };
 
 let hashedString 
