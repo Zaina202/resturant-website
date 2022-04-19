@@ -8,13 +8,6 @@ body{
     background:url('https://scontent.fgza9-1.fna.fbcdn.net/v/t39.30808-6/277754706_285942500365463_5345295541456937520_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=730e14&_nc_ohc=E3DT-0s0w8IAX_Sy0Hm&_nc_ht=scontent.fgza9-1.fna&oh=00_AT-h-Dk7oc9-Syzuafht-68xfYixBM9MkQpvtBEUrghdxw&oe=6256DCCF') ;
     background-size:cover ;
 }
-.titleB img{
-    width: 120px;
-    height: 120px;
-    margin: 10px;
-    border-radius: 150px;
-  
-  }
 .message1{
     position: absolute;
     top: 77%;
@@ -82,7 +75,7 @@ body{
     height:280px ;
     top: 50%;
     left: 50%;
-    background-color: rgba(87, 85, 81, 0.534);
+    background-color: rgb(243, 232, 212);
     transform: translate(-50%,-50%);
     position: absolute;
     color: rgb(0, 2, 3);
