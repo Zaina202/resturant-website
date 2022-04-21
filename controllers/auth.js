@@ -4,6 +4,7 @@ const bcrypt=require('bcryptjs')
 const {v4:uuidv4}=require('uuid')
 const sendEmail = require("../verification")
 
+
 const db=mysql.createConnection({
     host:process.env.DATABASE_HOST,
     user:process.env.DATABASE_USER,
@@ -11,8 +12,6 @@ const db=mysql.createConnection({
     database:process.env.DATABASE
 
 })
-
-
 
 const { DEC8_BIN } = require("mysql/lib/protocol/constants/charsets")
 const async = require("hbs/lib/async")
