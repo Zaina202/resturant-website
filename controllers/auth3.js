@@ -22,20 +22,20 @@ exports.register=(req,res)=>{
         if(err){
             console.log(err)
         }
-      
          if(results.length > 20 ){
-             db.query('DELETE FROM tables WHERE table_id = ?', [req.params.table_id], (err, rows) => {
-
-                if(err){
-                    console.log(err)
-                }else{
+           
+                db.query('DELETE FROM tables WHERE time = ?', [Time], (err, rows) => {
+                    if(err){
+                   console.log(err)
+                        }
+                });
                     return res.render('Booking',{
                         message:'The restaurant is full at this time'
                     })
-                }
-                });
+                           
             
-         }else if(Date===""||Time===""||customers===""){
+            }
+        if(Date===""||Time===""||customers===""){
             return res.render('Booking',{
                 message:'plese enter values'   
             })
@@ -52,7 +52,7 @@ exports.register=(req,res)=>{
         res.render("menu")
      });
         } 
-
+  
        
     });           
 
