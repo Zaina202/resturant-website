@@ -7,12 +7,13 @@
     
 }
 body{
-    background: url(https://scontent.fjrs1-2.fna.fbcdn.net/v/t39.30808-6/277739952_285942110365502_1930370243012900274_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=730e14&_nc_ohc=x95cKMOT3isAX9tzvSF&_nc_ht=scontent.fjrs1-2.fna&oh=00_AT8y_38E1nTLLuEg926_HvdQXNB9C2o8hkrYIzeRzmt-Cw&oe=62573AA9);
+    background: url('https://scontent.fjrs27-1.fna.fbcdn.net/v/t39.30808-6/277739952_285942110365502_1930370243012900274_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=730e14&_nc_ohc=tU3iAqtl8sQAX_xbdsi&_nc_ht=scontent.fjrs27-1.fna&oh=00_AT9yPdkXYGpzJUJ6bH1y4fcXdJxPhYBpq8yQZDGQX4Zc_w&oe=626CFB69');
     background-size:cover ;
 }
 .container{
     display: flex;
 }
+
 .title{
    
     background-color: rgb(41, 41, 40);
