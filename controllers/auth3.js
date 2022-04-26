@@ -16,10 +16,9 @@ exports.register=(req,res)=>{
 
     console.log(req.body)
     const{Date,Time,customers,Note}=req.body
-    console.log(Date,Time);
    
     db.query('SELECT * FROM tables WHERE  time=?',[Time],(err,results)=>{
-        if(err){
+      if(err){
             console.log(err)
         }
          if(results.length > 20 ){
