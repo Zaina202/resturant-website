@@ -84,6 +84,20 @@ body{
     border: 1px solid rgb(194, 190, 190);
 
 }
+.RESET_Password{
+    width: 370px;
+    height:450px ;
+    top: 50%;
+    left: 50%;
+    background-color:rgb(87, 85, 81, 0.534) ;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    color: rgb(0, 2, 3);
+    margin: auto;
+    border-radius: 3px;
+    border: 1px solid rgb(194, 190, 190);
+
+}
 .field-icon{
     float: right;
     margin-top: -25px;
