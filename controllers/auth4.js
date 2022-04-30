@@ -14,14 +14,19 @@ const async = require("hbs/lib/async")
 
 exports.register=(req,res)=>{
     console.log(req.body)
-    const{m1,M1,m2,M2,m3,M3,m4,M4,m5,M5,m6,M6,m7,M7,m8,M8,m9,M9,m10,M10,m11,M11,m12,M12,m13,M13,m14,M14,m15,M15,m16,M16,
-        m17,M17,m18,M18,m19,M19,m20,M20,m21,M21,m22,M22,m23,M23,m24,M24,m25,M25}=req.body
-
-db.query('SELECT * FROM order_s ',(err,results)=>{
+        const m=[req.body.m1,req.body.m2,req.body.m3,req.body.m4,req.body.m5,req.body.m6,req.body.m7,req.body.m8,req.body.m9,req.body.m10,req.body.m11,req.body.m12,req.body.m13,req.body.m14,req.body.m15,req.body.m16,
+            req.body.m17,req.body.m18,req.body.m19,req.body.m20,req.body.m21,req.body.m22,req.body.m23,req.body.m24,req.body.m25]
+let bill=0;
+db.query('SELECT price FROM order_s ',(err,results)=>{
+    console.log("m=", m[0])
     if(err){
         console.log(err)
     }else{
-        console.log("res=",results[0])
+    console.log("res=",results[0].price)
+
+    for(let i=0;i<10;i++)
+    bill=bill+( m[i]*(results[i].price))
+    console.log("bill=",bill)
     }
 })
 
