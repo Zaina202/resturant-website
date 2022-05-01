@@ -17,15 +17,21 @@ exports.register=(req,res)=>{
         const m=[req.body.m1,req.body.m2,req.body.m3,req.body.m4,req.body.m5,req.body.m6,req.body.m7,req.body.m8,req.body.m9,req.body.m10,req.body.m11,req.body.m12,req.body.m13,req.body.m14,req.body.m15,req.body.m16,
             req.body.m17,req.body.m18,req.body.m19,req.body.m20,req.body.m21,req.body.m22,req.body.m23,req.body.m24,req.body.m25]
 let bill=0;
-db.query('SELECT price FROM order_s ',(err,results)=>{
+let order=[];
+db.query('SELECT price,meal FROM order_s ',(err,results)=>{
     console.log("m=", m[0])
     if(err){
         console.log(err)
     }else{
     console.log("res=",results[0].price)
 
-    for(let i=0;i<10;i++)
+    for(let i=0;i<10;i++){
     bill=bill+( m[i]*(results[i].price))
+    if(m[i]>0){
+            order[i]=results[i].meal;
+    }
+    }
+    console.log("order=",order)
     console.log("bill=",bill)
     }
 })
