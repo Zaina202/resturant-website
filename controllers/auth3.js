@@ -64,13 +64,3 @@ exports.register=(req,res)=>{
 }
 
 console.log('hiii');
-/* db.query('DELETE FROM bill WHERE id = ?', [req.params.id], (err, rows) => {
-
-  //   if(err) {
-  //    console.log(err);
-  //   } else {
-  //     console.log(rows);
-  //   }
-
-  }); */
-  

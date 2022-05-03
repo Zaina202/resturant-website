@@ -34,15 +34,25 @@ db.query('SELECT price,meal FROM order_s ',(err,results)=>{
     }
     }
     console.log("order=",Order)
-    console.log("order=",typeof( Order))
+
+    if(Order===""||Bill===0){
+        return res.render('menu',{
+            message:'plese select your order'   
+        })
+    }else{
     db.query('INSERT INTO bill SET?',{your_order:Order,bill:Bill},(err,results)=>{
         if(err){
             console.log(err)
         }
         else{
             console.log(results)
+            return res.render('menu',{
+                message:'Your Order has been registered and your bill= '
+            })
+            
         }
     })
+}
     console.log("bill=",Bill)
     }
 })
