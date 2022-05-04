@@ -12,8 +12,9 @@ const db=mysql.createConnection({
 const { DEC8_BIN } = require("mysql/lib/protocol/constants/charsets")
 const async = require("hbs/lib/async")
 
-exports.delete=(req,res)=>{
-
+exports.register=(req,res)=>{
+  console.log("params=",req.body)
+  
  db.query('DELETE FROM bill WHERE id = ?', [req.params.id], (err, rows) => {
 
      if(err) {
