@@ -12,9 +12,9 @@ const db=mysql.createConnection({
 const { DEC8_BIN } = require("mysql/lib/protocol/constants/charsets")
 const async = require("hbs/lib/async")
 
-exports.register=(req,res)=>{
-  console.log("params=",req.body)
+exports.deleteOrder=(req,res)=>{
   
+  console.log("body=",req.params.id)
  db.query('DELETE FROM bill WHERE id = ?', [req.params.id], (err, rows) => {
 
      if(err) {
@@ -28,7 +28,8 @@ exports.register=(req,res)=>{
     }
 
   }); 
-  
+
+
 }
 /*
 const mysql = require('mysql');

@@ -3,6 +3,6 @@ const authController=require('../Controllers/auth5')
 
 const router=express.Router()
 
-router.post("/deleteOrder",authController.register)
+router.delete("/deleteOrder/:id",authController.deleteOrder)
 
 module.exports=router

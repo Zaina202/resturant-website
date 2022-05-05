@@ -29,7 +29,7 @@ db.query('SELECT price,meal FROM order_s ',(err,results)=>{
     for(let i=0;i<10;i++){
     Bill=Bill+( m[i]*(results[i].price))
     if(m[i]>0){
-            Order+=results[i].meal+" , ";
+            Order+=m[i]+" "+results[i].meal+" , ";
            
     }
     }
@@ -47,7 +47,7 @@ db.query('SELECT price,meal FROM order_s ',(err,results)=>{
         else{
             console.log(results)
             return res.render('menu',{
-                message:'Your Order has been registered and your bill= '
+                message:'Your Order has been registered and your bill= ' 
             })
             
         }
