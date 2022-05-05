@@ -13,9 +13,8 @@ const { DEC8_BIN } = require("mysql/lib/protocol/constants/charsets")
 const async = require("hbs/lib/async")
 
 exports.deleteOrder=(req,res)=>{
-  
-  console.log("body=",req.params.id)
- db.query('DELETE FROM bill WHERE id = ?', [req.params.id], (err, rows) => {
+
+ db.query('DELETE FROM bill WHERE id = (SELECT MAX(id) FROM bill)', (err, rows) => {
 
      if(err) {
     console.log(err);
