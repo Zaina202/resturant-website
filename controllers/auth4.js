@@ -46,10 +46,9 @@ db.query('SELECT price,meal FROM order_s ',(err,results)=>{
         }
         else{
             console.log(results)
-            return res.render('menu',{
-                message:'Your Order has been registered and your bill= ' 
-            })
-            
+                return res.render('menu',{
+                message:`Your Order has been registered and your bill= ${Bill}`
+            })            
         }
     })
 }
