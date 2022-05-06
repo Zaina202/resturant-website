@@ -1,8 +1,3 @@
-const{v4 : uuidv4} = require("uuid")
-require('dotenv').config();
-const nodemailer =require('nodemailer');
-const bcrypt = require('bcrypt');
-const randtoken = require('rand-token');
 const mysql = require("mysql")
 const db=mysql.createConnection({
     host:process.env.DATABASE_HOST,
@@ -11,123 +6,155 @@ const db=mysql.createConnection({
     database:process.env.DATABASE
 
 })
+const express = require("express")
+const router = express()
+const nodemailer = require('nodemailer')
+const {v4: uuidv4} = require("uuid")
+const bcrypt = require("bcrypt")
+const dotenv = require('dotenv').config()  
+function sendVerEmail(email){
+    //url to be used in the email 
+    currentURL = "http://localhost:5001/"
+    const uniqueString = uuidv4();
 
-// var express = require('express');
-// var router = express.Router();
-// var connection = require('../database.js');
-// var nodemailer = require('nodemailer');
-
-
-//send email
-function sendEmail(email, token) {
-    let email = email;
-    let token = token;
-    let mail = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: 's12029171@stu.najah.edu',
-            pass: 'neu@544346',
+    //nodemailer staff 
+    let transporter = nodemailer.createTransport({
+        service:'gmail',
+        auth:{
+            user: 'whitelounge.ps@gmail.com',
+            pass: 'White123456789',
         }
-});
+    });
+    transporter.verify((error, success) =>{
+        if(error){
+            console.log("Failed to send Email" + error);
+        }else{
+            console.log("Email sent successfully"+ email)
+        }
+    })
 
-let mailOptions = {
-    from: 's120249171@stu.najah.edu',
-    to: `${email}`,
-    subject: 'Reset Password ',
-    html: '<p>You requested for reset password, kindly use this <a href="/forgot_pass' + token + '">link</a> to reset your password</p>'
-};
+//Step 2
+    let mailOption = {
+        from: 'Admin',       
+        to: email, 
+        subject: 'Reset Password Request', 
+        html: `<p>Please click below to be able to reset your password, once you open this link it wont be valid anymore. </p>
+         <a href = ${currentURL + "resetRequest/"+ email + "/" + uniqueString}> Click here </a>`
+    };
+    //hash the unique string
+    hasheduniqueString = bcrypt.hash(uniqueString, 10)
+    .then((hasheduniqueString) => {                 
+        db.query("UPDATE users SET passwordUUID = ? WHERE email = ?", [hasheduniqueString, email], (err)=>{
+            if(err){
+                console.log("Error while inserting the uniqueString for password to the DB");
+                res.render("forgot_pass", {message: "Please request another verification email"})
+            }else{//step 3 
+                transporter.sendMail(mailOption, function(err, data){
+                    if(err){
+                        console.log("Error While sending the verefication email! " + err)
+                    }else{
+                        console.log("Done !!")
+                    }
+                })
+            }
+        })
+    })
+    .catch((e)=>{
+        console.log("Error while hasihng the unique string  ", e)
+        res.render("forgot_pass", {message: "Please request another verification email"})
+    })
+}
+//send email to resetpass
+router.post("/newPasswordReq", (req, res)=>{
+    let {email} = req.body  
+    console.log(email) 
+    db.query("SELECT EMAIL FROM users WHERE EMAIL = ?", [email], async(error, result)=>{
+        if(error){
+            console.log("Error while chicking if the user exists in the DB")  
+            res.render("forgot_pass", {message: "Something went wrong please try again"})
+        }else{
+            if(result.length > 0){      
+        sendVerEmail(email)
+                res.render("forgot_pass", {message: "Please check your email to be able to reset your password"})
+            }else{
+                res.render("forgot_pass", {message: "Please enter a valid email"})   
+                console.log(result)         
+            }
+        }
+    }) 
+})
 
-mail.sendMail(mailOptions, function(error, info) {
-    if (error) {
-        console.log('error occurs' + error)
-        } else {
-        console.log('Reset Password done?')
+
+router.get("/resetRequest/:email/:passwordUUID", (req, res)=>{
+    let {email, passwordUUID} = req.params 
+    db.query("SELECT passwordUUID FROM users WHERE email= ?", [email], async (error, result)=>{
+        if(result[0].passwordUUID){
+            let compResult    
+            compResult = await bcrypt.compare(passwordUUID, result[0].passwordUUID)
+            .then((compResult)=>{
+                if(compResult){  
+                    console.log(compResult)         
+                    res.redirect(`/reset/${email}`)       
+                    db.query("UPDATE users SET passwordUUID = NULL WHERE email = ?",[email], (error)=>{      
+                        if(error){       
+                            console.log("Error occured while deleting the reset password string ", error);    
+                        }else{
+                            console.log("passwordUUID Deleted successfully!")
+                        }  
+                    }) 
+                }else{ 
+                    res.render("forgot_pass", {message: "This link is invalid, please request another link"})     
+                }
+            })
+            .catch((e)=>{    
+                console.log("Error while comparing the unique strings  " + e)
+                res.render("forgot_pass", {message: "This link is invalid, please request another link"})     
+            })
+            
+        }else{
+            res.render("forgot_pass", {message: "This link is invalid, please request another link"})
+        }
+        if(error){
+            console.log("Error while searching for the unique string")
+            res.render("forgot_pass", {message: "This link is invalid, please request another link"})
+        }
+    })
+})  
+
+  //new pass(modify old pass)
+router.post("/pass/:email", (req, res)=>{
+    let email = req.params.email//email sent parameter
+    let {password, confirmpassword} = req.body  
+    //console.log(req.body)
+    if(password !== confirmpassword){
+        res.render('reset',{         
+        failMessage:"Password and confirm password must be the same, please try again"
+        });   
+    }else{
+            console.log("aces")
+            let hashedPass = bcrypt.hash(password, 8 )
+            .then((hashedPass)=>{         
+                db.query("UPDATE users SET password = ? WHERE email = ?", [hashedPass,email],(error)=>{
+                    if(error){     
+                        console.log("Error while setting the new password ", e)     
+                    }else{
+                        res.render("index", {message: "Password changed successfully"})
+                    }
+                })
+            })
+            .catch((e)=>{console.log("Error while hashing the password")})  
     }
-});
-}
+})          
 
-/* home page *//////////////
-router.get('/', function(req, res, next) {
-    res.render('index', {
-        title: 'Forgot Password Page'
-});
-});
-/* send reset password link in email */
-router.post('/reset-password-email', function(req, res, next) {
-    let email = req.body.email;
-    
-//console.log(sendEmail(email, fullUrl));
-db.query('SELECT * FROM users WHERE email ="' + email + '"', function(err, result) {
-    if (err) throw err;
-    let type = ''
-    let msg = ''
-    console.log(result[0]);
-    if (result[0].email.length > 0) {
-        let token = randtoken.generate(20);
-        let sent = sendEmail(email, token);
-        if (sent != '0') {
-            let data = {
-                token: token
-}
-db.query('UPDATE users SET ? WHERE email ="' + email + '"', data, function(err, result) {
-    if(err) throw err
+
+router.get("/forgot_pass", (req, res)=>{
+    res.render("forgot_pass");
 })
 
-type = 'success';
-msg = 'The reset password link has been sent to your email address';
-} else {
-    type = 'error';
-    msg = 'Something goes to wrong. Please try again';
-}
-} else {
 
-console.log('2');
-type = 'error';
-msg = 'The Email is not registered with us';
-}
-req.flash(type, msg);
-res.redirect('/');
-});
+router.get("/reset/:email", (req, res)=>{  
+        res.render("reset", {email: req.params.email});
 })
-/* reset page */
-router.get('/reset-password', function(req, res, next) {
-    res.render('reset-password', {
-        title: 'Reset Password Page',
-        token: req.query.token
-});
-});
-/* update password to database */
-router.post('/update-password', function(req, res, next) {
-    let token = req.body.token;
-    let password = req.body.password;
-    connection.query('SELECT * FROM users WHERE token ="' + token + '"', function(err, result) {
-        if (err) throw err;
-        let type
-        let msg
-         if (result.length > 0) {
-            let saltRounds = 10;
-// var hash = bcrypt.hash(password, saltRounds);
-bcrypt.genSalt(saltRounds, function(err, salt) {
-    bcrypt.hash(password, salt, function(err, hash) {
-        let data = {
-            password: hash
-}
 
-connection.query('UPDATE users SET ? WHERE email ="' + result[0].email + '"', data, function(err, result) {
-    if(err) throw err
-});
-});
-});
-type = 'success';
-msg = 'Your password has been updated successfully';
-} else {
-    console.log('2');
-    type = 'success';
-    msg = 'Invalid link; please try again';
-}
-
-req.flash(type, msg);
-res.redirect('/');
-});
-})
+        
 module.exports = router;

@@ -35,7 +35,7 @@ app.use('/auth2',require('./routes/user'))
 app.use('/auth3',require('./routes/tables'))
 app.use('/auth4',require('./routes/meal'))
 app.use('/auth5',require('./routes/deleteOrder'))
-
+app.use('/',require('./routes/PasswordReset'))
 app.listen(5001,()=>{
     console.log("server started on port 5001")
 })

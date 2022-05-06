@@ -13,10 +13,11 @@
         </div>
     <div class="Forgot_Password">
         <h1><em>Forgot Password ?</em></h1>
-        <form action="#"method="get">
+        <form action="/newPasswordReq"method="post"><!--add passwordUUID to db -->
+
             <br>
-            <p>Enter Your email address or phone number </p><br>
-            <input type="email"placeholder="Email or phone">
+            <p>Enter Your email address </p><br>
+            <input type="email" name="email" placeholder="Email or phone">
             
                 <input type="Submit" value="Send Recovery link" class="btn"> 
             <p class="par">Return to <a href="/">Log in</a></p>

@@ -38,4 +38,8 @@ router.get("/Booking", (req, res)=>{
     res.render("menu")
  })
 
+
+router.get("/reset", (req, res)=>{
+    res.render("reset")
+ })
 module.exports=router
