@@ -88,11 +88,22 @@
             <input id="submit" type="submit" value="add your order">
             </div>
     </form>
+
     <form action="/auth5/deleteOrder" method="POST">
     <div class="column">
             <input id="submit" type="submit" value="cancel your order">
             </div>
             </form>
+
+             <form action="/auth5/deleteOrder" method="GET">
+    <div class="column">
+            <input id="submit" type="submit" value="read your order">
+            </div>
+
+            <h1>{{this.your_order}}</h1>
+            <h1>{{this.bill}}</h1>
+            </form>
+            
 <div>
    {{#if message}}
         <h4>{{message}}</h4>

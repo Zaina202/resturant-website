@@ -30,6 +30,21 @@ exports.deleteOrder=(req,res)=>{
 
 
 }
+exports.readOrder=(req,res)=>{
+  db.query('SELECT * FROM bill WHERE id = (SELECT MAX(id) FROM bill)', (err, rows) => {
+  
+    if (!err) {
+      res.render('menu',{message:` ${ rows}`});
+    } else {
+      console.log(err);
+    }
+    console.log('The data from bill table: \n',typeof( rows));
+  });
+}
+
+
+
+
 /*
 const mysql = require('mysql');
 
