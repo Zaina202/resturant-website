@@ -33,6 +33,14 @@ body{
    position: relative;
    left: -15px;
 }
+.message3 h4{
+   color: rgb(235, 45, 45);
+   font-size:small;
+   text-shadow: 0 0 1px black;
+   position: relative;
+  
+   top: -50px;
+}
 .welcom{
     
     position: absolute;
@@ -195,6 +203,19 @@ i:nth-child(4){
     font-weight: bold;
     position: relative;
     top: 5px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+.btn1{
+    width: 150px;
+    height: 45px;
+    border-radius: 45px;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    position: relative;
+    top: 20px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
