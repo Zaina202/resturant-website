@@ -42,6 +42,9 @@ router.get("/Booking", (req, res)=>{
  router.get("/menu", (req, res)=>{
     res.render("menu")
  })
+ router.get("/imgMenu", (req, res)=>{
+    res.render("imgMenu")
+ })
 
 
 router.get("/reset", (req, res)=>{

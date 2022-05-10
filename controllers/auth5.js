@@ -33,7 +33,6 @@ exports.deleteOrder=(req,res)=>{
 exports.readOrder=(req,res)=>{
   //const{order,bill}=req.body;
   db.query('SELECT your_order,bill FROM bill WHERE id = (SELECT MAX(id) FROM bill)', (err, rows) => {
-    let b=rows;
     const{your_order,bill}=rows[0];
     console.log('The data from bill table: \n',rows);
 
