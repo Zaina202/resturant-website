@@ -32,7 +32,7 @@ exports.deleteOrder=(req,res)=>{
 }
 exports.readOrder=(req,res)=>{
   //const{order,bill}=req.body;
-  db.query('SELECT * FROM bill WHERE id = (SELECT MAX(id) FROM bill)', (err, rows) => {
+  db.query('SELECT your_order,bill FROM bill WHERE id = (SELECT MAX(id) FROM bill)', (err, rows) => {
   
     if (!err) {
       res.render('menu');
@@ -40,8 +40,11 @@ exports.readOrder=(req,res)=>{
       
     } else {
       console.log(err);
+      
     }
+    let b=rows;
     console.log('The data from bill table: \n',rows);
+    
   });
 }
 

@@ -26,7 +26,7 @@ db.query('SELECT price,meal FROM order_s ',(err,results)=>{
     }
     else{
 
-    for(let i=0;i<10;i++){
+    for(let i=0;i<25;i++){
     Bill=Bill+( m[i]*(results[i].price))
     if(m[i]>0){
             Order+=m[i]+" "+results[i].meal+" , ";
@@ -37,7 +37,7 @@ db.query('SELECT price,meal FROM order_s ',(err,results)=>{
 
     if(Order===""||Bill===0){
         return res.render('menu',{
-            message:'plese select your order'   
+            message:'please select your order'   
         })
     }else{
     db.query('INSERT INTO bill SET?',{your_order:Order,bill:Bill},(err,results)=>{
@@ -47,7 +47,8 @@ db.query('SELECT price,meal FROM order_s ',(err,results)=>{
         else{
             console.log(results)
                 return res.render('menu',{
-                message:`Your Order has been registered and your bill= ${Bill}`
+                message:`Your Order has been registered 
+                 , your bill = ${Bill}`
             })            
         }
     })

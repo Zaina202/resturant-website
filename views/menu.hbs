@@ -16,11 +16,11 @@
                 <img src="https://scontent.fjrs1-2.fna.fbcdn.net/v/t1.6435-9/192882024_105769938382721_8408343321821855858_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=hHrsucq2x8YAX-5y0ST&_nc_ht=scontent.fjrs1-2.fna&oh=00_AT83ijIQnksf24jyNNpTWoWwPwAtYskC8dL09by4MmVhoA&oe=6275E483"alt="logo" width="290px" height="290px">
             <dive class="contant">
         <div class="head"id="part">
-            <button class="z"><a href="/home"target="_blank" >Home</a></button>
+            <button class="z"><a href="/home" >Home</a></button>
             <button class="z">Menu</button>
-            <button class="z"><a href="/Booking"target="_blank" >Booking</a></button>
-            <button class="z"><a href="/visit"target="_blank" >Visit</a></button>
-            <button class="z"><a href="https://www.google.com/maps/dir/32.2240512,35.2354304/32.2159963,35.2372675/@32.2200835,35.247805,15z/data=!3m1!4b1!4m4!4m3!1m1!4e1!1m0"target="_blank" >location</a></button>              
+            <button class="z"><a href="/Booking" >Booking</a></button>
+            <button class="z"><a href="/visit" >Visit</a></button>
+            <button class="z"><a href="https://www.google.com/maps/dir/32.2240512,35.2354304/32.2159963,35.2372675/@32.2200835,35.247805,15z/data=!3m1!4b1!4m4!4m3!1m1!4e1!1m0" >location</a></button>              
             <button class="z"><a href="https://www.facebook.com/Whiteloungepal"target="_blank" class="fa fa-facebook"></a></button>
             <button class="z"><a href="https://www.instagram.com/white_lounge/?hl=en"target="_blank" class="fa fa-instagram"></a></button>
 
@@ -84,22 +84,17 @@
  <input  type="number"  name="m25" min="0"><label for=""name="M25"> Sahm wa Qurfa              <h4>20</h4></label>
  </pre>
     </div>
-    <div class="column">
-            <input id="submit" type="submit" value="add your order">
-            </div>
-    </form>
+<div class="order_contain">
+            <input class="submit" type="submit" value="add your order">  
+        </form>
 
     <form action="/auth5/deleteOrder" method="POST">
-    <div class="column">
-            <input id="submit" type="submit" value="cancel your order">
-            </div>
+            <input class="submit" type="submit" value="cancel your order">
             </form>
 
              <form action="/auth5/deleteOrder" method="GET">
-    <div class="column">
-            <input id="submit" type="submit" value="read your order">
-            </div>
-
+            <input class="submit" type="submit" value="read your order">
+</div>
          <!--  <table class="table table-bordered">
   <thead class="thead-dark">
     <tr>
@@ -122,9 +117,9 @@
 </table>-->
             </form>
             
-<div class="message2">
+<div >
    {{#if message}}
-        <h4>{{message}}</h4>
+        <h4 ><div class="message2">{{message}}</div></h4>
         {{/if}}
         </div>
     </body>
