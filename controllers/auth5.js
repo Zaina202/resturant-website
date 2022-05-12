@@ -9,8 +9,8 @@ const db=mysql.createConnection({
     database:process.env.DATABASE
 
 })
-const { DEC8_BIN } = require("mysql/lib/protocol/constants/charsets")
-const async = require("hbs/lib/async")
+// const { DEC8_BIN } = require("mysql/lib/protocol/constants/charsets")
+// const async = require("hbs/lib/async")
 
 exports.deleteOrder=(req,res)=>{
 
@@ -22,7 +22,7 @@ exports.deleteOrder=(req,res)=>{
    else {   
     console.log(rows);
     return res.render('menu',{
-        message:'Your Order has been cancelled '
+        message:' Your Order has been Cancelled '
     })
     }
 
@@ -39,7 +39,7 @@ exports.readOrder=(req,res)=>{
     if (!err) {
       //res.render('menu');
       return res.render('menu',{
-        message:`Your order is : ${your_order} with bill= ${bill}`
+        message:` Your order is : ${your_order} with bill = ${bill} ₪`
     }) 
       
     } else {
