@@ -40,7 +40,7 @@ exports.register=(req,res)=>{
             })
         }
          else{
-         db.query('INSERT INTO tables SET?',{date:Date,time:Time,num_of_people:customers,phone_num:num,note:Note},(err,results)=>{
+         db.query('INSERT INTO tables SET?',{time:Time,num_of_people:customers,phone_num:num,note:Note},(err,results)=>{
                  if(err){
                      console.log(err)
                  }
