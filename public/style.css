@@ -7,6 +7,8 @@
 body{
     background:url('https://gcdnb.pbrd.co/images/r6rPeOlyBZeW.jpg?o=1') ;
     background-size:cover ;
+    width: 1000px;
+
 }
 .message1{
     position: absolute;

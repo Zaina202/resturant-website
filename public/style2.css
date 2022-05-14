@@ -2,13 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-   color: white;
     font-family: 'Times New Roman', Times, serif;
     
 }
 body{
     background: url('https://gcdnb.pbrd.co/images/fCCSsRqrvQdm.jpg?o=1');
     background-size:cover ;
+
 }
 .container{
     display: flex;

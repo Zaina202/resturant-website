@@ -19,6 +19,11 @@ exports.register=(req,res)=>{
         if (error) {
           throw error;
         }
+        if(email===''||password===''){
+          return res.render('index',{
+            message:'plese enter your email and password'   
+        })
+        }else{
         if (results.length  && bcrypt.compareSync(password,results[0].password)) {
           return res.render("home",{
               message:false
@@ -29,6 +34,7 @@ exports.register=(req,res)=>{
           });
         }
       }
+    }
     );
   
 
