@@ -2,10 +2,12 @@ const express=require("express")
 const path=require("path")
 const mysql=require("mysql")
 const dotenv=require('dotenv')
-
 dotenv.config({path:'./.env'});
 
 const app =express()
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
+var cookieSession = require('cookie-session')
 
 const db=mysql.createConnection({
     host:process.env.DATABASE_HOST,
@@ -14,6 +16,18 @@ const db=mysql.createConnection({
     database:process.env.DATABASE
 
 })
+app.use(cookieSession({
+    name: 'session',
+    keys: ['key1', 'key2']
+  }));
+  
+  app.use(session({ 
+      secret: '123458cat',
+      resave: false,
+      saveUninitialized: true,
+      cookie: { maxAge: 90000 }
+    }));
+  app.use(cookieParser());
 
 const publicDirectory= path.join(__dirname,'./public')
 app.use(express.static(publicDirectory))
