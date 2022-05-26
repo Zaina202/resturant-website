@@ -212,17 +212,25 @@ label{
       height: 210px;
       border:5px solid black;
       margin:20px 20px 20px 50px;
-      background-color:rgba(0, 0, 0, 0.534) ;
+      background-color:rgba(87, 85, 81, 0.534) ;
     }
     h1{
       margin-left: 30px;
       
     }
-   
+    .hide{
+      animation: cssAnimation 0s 2.5s forwards;
+      visibility: visible;
+    }
+    
+    @keyframes cssAnimation {
+      to   { visibility: hidden; }
+    }
     .message2{
+
       background-color: rgb(70, 65, 65);
       width: 500px;
-      height: 100px;
+      height: max-content;
       text-align: center;
       padding: 10px;
       font-size: x-large;
@@ -231,7 +239,7 @@ border-radius: 3px;
 position: absolute;
 top: 20%;
 left: 30%;
-padding: 30px 0 0 0;
+padding: 30px 5px 30px 5px;
     }
     
   
