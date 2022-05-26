@@ -7,7 +7,7 @@ dotenv.config({path:'./.env'});
 const app =express()
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
-var cookieSession = require('cookie-session')
+var cookieSession = require('cookie-session');
 
 const db=mysql.createConnection({
     host:process.env.DATABASE_HOST,
@@ -53,6 +53,7 @@ app.use('/',require('./routes/PasswordReset'))
 app.listen(5001,()=>{
     console.log("server started on port 5001")
 })
+
 
 
 

@@ -11,7 +11,7 @@
 var interval;
          $(document).on('mousemove', function () {
              clearInterval(interval);
-             var coutdown = 1 * 60, $timer = $('.timer'); // After 5 minutes session expired  (mouse button click code)
+             var coutdown = 5 * 60, $timer = $('.timer'); // After 5 minutes session expired  (mouse button click code)
              $timer.text(coutdown);
              interval = setInterval(function () {
                  $timer.text(--coutdown);
@@ -19,7 +19,7 @@ var interval;
                  if (coutdown === 0) {
 
                      alert("Session expired. User successfully logged out.");
-                     window.location = "UserLogin.php";
+                     window.location = "index.hbs";
                  }
 
              }, 1000);
@@ -28,7 +28,7 @@ var interval;
          var interval;
                      $(document).on('keydown', function () {
              clearInterval(interval);
-             var coutdown =1 * 60, $timer = $('.timer'); // After 5 minutes session expired (keyboard button press code)
+             var coutdown = 5 * 60, $timer = $('.timer'); // After 5 minutes session expired (keyboard button press code)
              $timer.text(coutdown);
              interval = setInterval(function () {
                  $timer.text(--coutdown);
@@ -36,7 +36,7 @@ var interval;
                  if (coutdown === 0) {
 
                      alert("Session expired User successfully logout.");
-                     window.location = "UserLogin.php";
+                     window.location = "index.hbs";
                  }
 
              }, 1000);

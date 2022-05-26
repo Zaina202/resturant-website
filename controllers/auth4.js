@@ -75,4 +75,3 @@ db.query('SELECT price,meal FROM order_s ',(err,results)=>{
 
     
 }
-console.log("meal")
