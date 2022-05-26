@@ -14,23 +14,12 @@ body{
   /* .h4{
     margin-top: 100px;
   } */
-  .tabel{
-    width: 102%;
-
-    background-color: rgba(235, 235, 230, 0.332);
-    border-radius: 3px;
-    border: 1px solid rgb(194, 190, 190);
-    font-family: Arial, Helvetica, sans-serif;
-    /* text-align: justify; */
-    color: rgb(0, 0, 0);
   
-  }
   .tabel img{
-    width: 80px;
-    height: 80px;
-    border-radius: 100px;
-    top: 30%;
-    margin-left: 1%;
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+    border-radius: 150px;
   }
   
   .half1
@@ -88,15 +77,8 @@ body{
   height: 350px;
   /* display: inline-block; */
 }
-     h1:hover{
-       color:  rgba(255, 255, 255, 0.5);
-    }
-    .text h2:hover{
-        color:  rgba(255, 255, 255, 0.5);   
-     }
-T{
-   margin-bottom: 100%;
-}
+ 
+
 
 /* 
  */

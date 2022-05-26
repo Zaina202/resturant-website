@@ -4,6 +4,10 @@ const mysql=require("mysql")
 const dotenv=require('dotenv')
 dotenv.config({path:'./.env'});
 
+const myusername = 'user1'
+const mypassword = 'mypassword'
+
+var session;
 const app =express()
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
@@ -20,14 +24,22 @@ app.use(cookieSession({
     name: 'session',
     keys: ['key1', 'key2']
   }));
-  
+  const time = 2000 * 60 * 60 ;
+
   app.use(session({ 
-      secret: '123458cat',
+      secret: 'thisismysecrctekeyfhrgfgrfrty84fwir767',
       resave: false,
       saveUninitialized: true,
-      cookie: { maxAge: 90000 }
+      cookie: { maxAge:time }
     }));
   app.use(cookieParser());
+
+// parsing the incoming data
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+//serving public file
+
 
 const publicDirectory= path.join(__dirname,'./public')
 app.use(express.static(publicDirectory))

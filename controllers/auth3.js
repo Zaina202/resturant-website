@@ -15,7 +15,7 @@ const async = require("hbs/lib/async")
 exports.register=(req,res)=>{
 
     console.log(req.body)
-    const{Date,Time,customers,num,Note}=req.body
+    const{Time,customers,num,Note}=req.body
    
     db.query('SELECT * FROM tables WHERE  time=?',[Time],(err,results)=>{
       if(err){
@@ -34,7 +34,7 @@ exports.register=(req,res)=>{
                            
             
             }
-        if(Date===""||Time===""||num===""||customers===""){
+        if(Time===""||num===""||customers===""){
             return res.render('Booking',{
                 message:'plese enter your information'   
             })
