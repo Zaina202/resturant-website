@@ -20,11 +20,7 @@ const db=mysql.createConnection({
     database:process.env.DATABASE
 
 })
-app.use(cookieSession({
-    name: 'session',
-    keys: ['key1', 'key2']
-  }));
-  const time = 2000 * 60 * 60 ;
+  const time = 1000*60*60;
 
   app.use(session({ 
       secret: 'thisismysecrctekeyfhrgfgrfrty84fwir767',

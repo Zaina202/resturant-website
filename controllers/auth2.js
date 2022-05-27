@@ -23,8 +23,11 @@ exports.register=(req,res)=>{
           return res.render('index',{
             message:'plese enter your email and password'   
         })
-        }else{
+        }
+        else{
         if (results.length  && bcrypt.compareSync(password,results[0].password)) {
+          req.session.user = results[0].id ;
+
           return res.render("home",{
               message:false
           });
