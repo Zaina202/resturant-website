@@ -21,8 +21,8 @@ function sendVerEmail(email){
     let transporter = nodemailer.createTransport({
         service:'gmail',
         auth:{
-            user: 'whitelounge.ps@gmail.com',
-            pass: 'White123456789',
+            user: 'resturantwhite@gmail.com',
+            pass: 'White123@',
         }
     });
     transporter.verify((error, success) =>{
