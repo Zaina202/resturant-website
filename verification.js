@@ -22,8 +22,8 @@ let transporter = nodemailer.createTransport({
     auth:{
         // user: 'whitelounge.ps@gmail.com',
         // pass: 'White123456789',
-        user: 'resturantwhite@gmail.com',
-        pass: 'White123@',
+        user: 's12029171@stu.najah.edu',
+        pass: 'neu@544346',
     }
 });
 //step 2
