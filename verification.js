@@ -20,9 +20,10 @@ async function emailVer(email, userId){
 let transporter = nodemailer.createTransport({
     service:'gmail',
     auth:{
-        user: 'whitelounge.ps@gmail.com',
-        pass: 'White123456789',
-
+        // user: 'whitelounge.ps@gmail.com',
+        // pass: 'White123456789',
+        user: 'resturantwhite@gmail.com',
+        pass: 'White123@',
     }
 });
 //step 2
