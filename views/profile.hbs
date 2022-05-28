@@ -4,19 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="/style3.css">
     <title>profile-page</title>
 </head>
 <body>
-    
+    <div class="title">
+        
+            <h1><em>Dear {{name}}<br><br> Welcom to White Lounge family</em></h1>
+            <img src="https://scontent.fjrs27-1.fna.fbcdn.net/v/t1.6435-9/192882024_105769938382721_8408343321821855858_n.jpg?_nc_cat=111&ccb=1-6&_nc_sid=09cbfe&_nc_ohc=TnL4AC26VisAX9TD_EC&_nc_ht=scontent.fjrs27-1.fna&oh=00_AT8RE9i9iNtJZixao4dMV1TeOwNgobLc97QaRwHhR2JAWQ&oe=62A16603"alt="logo" width="290px" height="290px">
+         
+      </div>
 <div class="info">
+<button ><a href="/home" class="fa fa-arrow-left"></a></button>
     <img class="img" src="https://avatars.hsoubcdn.com/012a90b1fd1f8a14f36b40d466a618c9?s=128"alt="profile picture" width="290px" height="290px">
-    <div class="div1">
-    <h3><em>User name: {{name}}&nbsp{{lastName}}</em></h3>
+    <div class="part" >
+        <h3><em>User name :</em></h3>
+    <h3 class="div1" ><em> {{name}}&nbsp{{lastName}}</em></h3>
     </div>
-    <div class="div1">
-    <h3><em>Your Email: {{email}}</em></h3>
-    </div>
+    <div class="part">
+                <h3><em>Your Email :</em></h3>
+    <h3 class="div1"><em> {{email}}</em></h3>
+    
 </div>
 </body>
 </html>
