@@ -3,8 +3,7 @@ body{
 background: url('https://scontent.fjrs26-1.fna.fbcdn.net/v/t39.30808-6/279186201_304694481823598_7005606029156756915_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=730e14&_nc_ohc=HJrW_fKl560AX8c18H4&_nc_ht=scontent.fjrs26-1.fna&oh=00_AT9c8lz5kQu3T2OLVZweZIeFnq59XcKlIyxmP-sDvfBclA&oe=62956FE8');  
 background-size:cover ;
   background-repeat: no-repeat;
-  /* background-position: right;
-  background-attachment: fixed; */
+ 
 
 
 
@@ -22,7 +21,6 @@ background-size:cover ;
     text-align: left;
     position: absolute;
     left: -10px;
-    /* top: 45%; */
     border:1px solid rgb(0, 0, 0);
     text-align: center;
     color: white;

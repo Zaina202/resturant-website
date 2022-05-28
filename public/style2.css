@@ -25,7 +25,6 @@ body{
     text-align: left;
     right: 60%;
     position: absolute;
-    /* top: 45%; */
     border:1px solid rgb(0, 0, 0);
     text-align: center;
     color: white;
@@ -77,7 +76,6 @@ width: 1100px;
 color: white;
   }
   
-  /* booking--------------------------- */
 
   .Table{
     width: 500px;
@@ -142,7 +140,6 @@ a{
 
 }
 
-/* ---------------- */
 
 .head{
   display: flex;
@@ -161,9 +158,6 @@ width: 1100px;
     background-color: rgba(255, 255, 255, 0);
     border: 1px solid rgba(0, 0, 0, 0);
     cursor: pointer;
-
-
-
 }
          
 .z:hover{

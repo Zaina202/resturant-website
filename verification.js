@@ -15,8 +15,7 @@ async function emailVer(email, userId){
     let uniqueString = uuidv4() + String(userId);
     let currentURL = "http://localhost:5001/"
 
-//step 1
-//"/routes/auth/verify/:userId/:uniqueString"
+
 let transporter = nodemailer.createTransport({
     service:'gmail',
     auth:{
@@ -24,7 +23,6 @@ let transporter = nodemailer.createTransport({
         pass: 'White123@',
     }
 });
-//step 2
 let mailOptions ={
   from: 's120249171@stu.najah.edu',
   to: `${email}`,
@@ -46,7 +44,6 @@ db.query("INSERT INTO verification SET?",{userId:userId,uniqueString:uniqueStrin
 
 
 
-//step 3
 transporter.sendMail(mailOptions,function(err,data){
     if(err){
 console.log('error occurs' + err);

@@ -30,11 +30,9 @@ const db=mysql.createConnection({
     }));
   app.use(cookieParser());
 
-// parsing the incoming data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-//serving public file
 
 
 const publicDirectory= path.join(__dirname,'./public')
