@@ -31,6 +31,18 @@ body{
     color: white;
 
 }
+.welcom{
+  width: 400px;
+  height: 100px;
+  background-color: rgba(105, 101, 101, 0.432);
+  border: 2px solid black;
+  border-radius: 10px;
+  position: absolute;
+  top: 200px;
+    left: 50%;
+    color: white;
+    padding: 10px;
+}
 .head{
     display: flex;
     position: absolute;
